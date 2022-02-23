@@ -1,13 +1,13 @@
 # Projeto SQL - MegaDados
 
 ## Introdução
-Neste projeto vocês irão desenvolver um microsserviço de carrinho de compras.
-O projeto será realizado em duplas.
-A entrega será via Github.
+Neste projeto vocês irão desenvolver um microsserviço de carrinho de compras.  
+O projeto será realizado em duplas.  
+A entrega será via Github.  
 ATENÇÃO: AMBOS OS MEMBROS DA EQUIPE DEVEM CONTRIBUIR NA FORMA DE COMMITS.
 PROJETOS COM APENAS UM CONTRIBUIDOR RESULTARÃO EM REPROVAÇÃO DE AMBOS OS 
 MEMBROS DA EQUIPE. A participação não precisa ser exatamente igual, mas tem que ser de pelo 
-menos 25% de um membro da equipe. 
+menos 25% de um membro da equipe.  
 Data de entrega da fase 1: 21/3/2022
 
 ## Requerimentos
@@ -19,18 +19,18 @@ inventário.
 
 ## CRUD
 A sigla CRUD vem do inglês Create/Read/Update/Delete, que indica as funções principais de um 
-sistema de armazenamento de informações:
-• Create: criar novos itens de dados;
-• Read: consultar o sistema para resgatar itens de dados armazenados;
-• Update: alterar itens de dados já existentes no sistema;
-• Delete: remover itens de dados do sistema.
+sistema de armazenamento de informações:  
+• Create: criar novos itens de dados;  
+• Read: consultar o sistema para resgatar itens de dados armazenados;  
+• Update: alterar itens de dados já existentes no sistema;  
+• Delete: remover itens de dados do sistema.  
 Esta sigla também é uma brincadeira em língua inglesa, já que a palavra crud significa sujeira – uma 
-possível alusão ao estado deplorável de muitos sistemas de informação por aí afora!
+possível alusão ao estado deplorável de muitos sistemas de informação por aí afora!  
 Nosso microsserviço é, portanto, um CRUD (mas não deverá ser crud, ok?)
 
 ## REST
 A sigla REST significa REpresentational State Transfer. Trata-se de um padrão de projeto em
-arquitetura de sistemas no qual um serviço de informações tem as seguintes características:
+arquitetura de sistemas no qual um serviço de informações tem as seguintes características:  
 • Arquitetura cliente-servidor: facilita a separação de responsabilidades entre a exibição da 
 informação (responsabilidade do cliente) e o gerenciamento desta (no servidor)
 • Ausência de estado (statelessness): toda a informação necessária para satisfazer uma 
@@ -41,9 +41,9 @@ podemos imaginar que duas consultas à mesma informação devem resultar na mesm
 resposta! (Diferente do caso em que haja estado armazenado no serviço, como um contador 
 por exemplo). Claro que, entre duas consultas, a informação do banco de dados ao qual o 
 serviço REST está conectado pode mudar. Um serviço REST deve, portanto, informar na sua 
-resposta:
-o se a informação provida é cacheable ou não
-o se for cacheable, por quanto tempo
+resposta:  
+  - se a informação provida é cacheable ou não  
+  - se for cacheable, por quanto tempo  
 • Sistema em camadas: um sistema REST não deverá saber se está diretamente conectado ao 
 sistema cliente ou não. Com isso, é possível inserir camadas de sistema entre o cliente e o 
 serviço RESTful, tais como caches, load balancers, proxies, etc.
