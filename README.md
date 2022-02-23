@@ -42,8 +42,8 @@ resposta! (Diferente do caso em que haja estado armazenado no serviço, como um 
 por exemplo). Claro que, entre duas consultas, a informação do banco de dados ao qual o 
 serviço REST está conectado pode mudar. Um serviço REST deve, portanto, informar na sua 
 resposta:  
-  - se a informação provida é cacheable ou não  
-  - se for cacheable, por quanto tempo  
+  - se a informação provida é cacheable ou não
+  - se for cacheable, por quanto tempo
 • Sistema em camadas: um sistema REST não deverá saber se está diretamente conectado ao 
 sistema cliente ou não. Com isso, é possível inserir camadas de sistema entre o cliente e o 
 serviço RESTful, tais como caches, load balancers, proxies, etc.  
@@ -53,20 +53,20 @@ representações. Quando o sistema cliente quer manipular algum recurso, tal rec
 estará identificado diretamente na URI. Por exemplo, em um serviço web RESTful para 
 um restaurante, vamos supor que o cliente deseja saber quais os pratos do menu. A 
 URI não deve ser algo do tipo {dominio}/sistema?action=consulta&section=pratos", 
-mas sim “{dominio}/pratos”  
+mas sim “{dominio}/pratos”
   - Mas então como especificar a “ação” a ser realizada? Usando os verbos do protocolo 
-HTTP!  
+HTTP!
     - Create: POST  
     - Read: GET  
     - Update: PUT (update/replace) ou PATCH (update/modify)  
     - Delete: DELETE  
-o As respostas incluem toda a informação necessária para a manipulação do item de 
+• As respostas incluem toda a informação necessária para a manipulação do item de 
 informação sendo enviado. Por exemplo: os metadados da resposta devem incluir 
 informação sobre a cacheability do item, o tipo de dados (imagem, audio, texto, json, 
 xml), etc. O estado da resposta também é relevante: uma resposta bem sucedida deve 
 retornar o código 200, já uma condição de erro deve ser indicada com o código HTTP 
 adequado (404, 420, etc).  
-o Hypermedia As The Engine Of Application State (HATEOAS): a informação de uma 
+• Hypermedia As The Engine Of Application State (HATEOAS): a informação de uma 
 requisição web e de uma resposta incluem, além do texto principal, uma série de 
 metadados (código de resposta, headers) que são chamados de hipermídia. Alem 
 disso, quando necessário, a resposta de um sistema web RESTful pode incluir URIs 
