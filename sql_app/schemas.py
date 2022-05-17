@@ -1,6 +1,6 @@
 from pydantic import BaseModel
 
-
+# Carrinho
 class ItemBase(BaseModel):
     title: str
     description: str | None = None
@@ -17,7 +17,7 @@ class Item(ItemBase):
     class Config:
         orm_mode = True
 
-
+# User
 class UserBase(BaseModel):
     email: str
 
@@ -33,3 +33,18 @@ class User(UserBase):
 
     class Config:
         orm_mode = True
+
+# Inventario do mercado
+class Storage(BaseModel):
+    id: int
+    product_name: str
+    qtd_available: int
+    price: float
+
+    class Config:
+        orm_mode = True
+
+class StorageItemCreate(BaseModel):
+    product_name: str
+    qtd_available: int
+    price: float

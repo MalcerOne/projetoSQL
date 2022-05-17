@@ -10,7 +10,7 @@ USER_DB  = os.environ.get("USER")
 PASSW_DB = os.environ.get("PASSW")
 
 #SQLALCHEMY_DATABASE_URL = "sqlite:///./sql_app.db"
-SQLALCHEMY_DATABASE_URL = "mysql://{USER_DB}:{PASSW_DB}@localhost/db_api"
+SQLALCHEMY_DATABASE_URL = f"mysql://{USER_DB}:{PASSW_DB}@localhost/db_api"
 
 engine = create_engine(SQLALCHEMY_DATABASE_URL)
 SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
