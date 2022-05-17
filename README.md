@@ -1,6 +1,7 @@
 # Projeto SQL - MegaDados
 
 ![Screenshot](./img/screenshot.png)
+![Screenshot2](./img/screenshot2.png)
 
 ## Introdução
 Neste projeto vocês irão desenvolver um microsserviço de carrinho de compras.  
